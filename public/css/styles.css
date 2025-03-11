@@ -1,0 +1,154 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-left: -9rem;
+}
+
+/* Search Bar Styles */
+.search-bar {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 250px;
+}
+
+/* Sidebar Common Styles */
+.left-sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 7rem; /* 256px */
+    padding: 1.25rem;
+    color: black;
+    transition: transform 0.3s ease-in-out;
+}
+
+.right-sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 16rem; /* 256px */
+    padding: 1.25rem;
+    color: black;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Left Sidebar */
+.left-sidebar {
+    left: 0;
+    background-color: #EADBC8;
+    transform: translateX(-100%); /* Hidden by default on small screens */
+}
+
+@media (min-width: 1024px) {
+    .left-sidebar {
+        transform: translateX(0); /* Fixed on large screens */
+    }
+}
+
+/* Right Sidebar */
+.right-sidebar {
+    right: 0;
+    background-color: #1F2937; /* Dark gray */
+    transform: translateX(100%); /* Hidden by default */
+}
+
+/* Sidebar Items */
+.sidebar-item {
+    margin-bottom: 0.5rem;
+}
+
+/*home,billing,delivery*/
+.sidebar-item a {
+    display: block;
+    padding-left:3px;
+    padding-right:3px;
+    padding-top:5px;
+    padding-bottom:5px;
+    border-radius: 0.25rem;
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    margin-bottom: 3rem;
+}
+
+.left-sidebar .sidebar-item a:hover {
+    background-color: #745858;
+}
+
+.right-sidebar .sidebar-item a:hover {
+    background-color: #374151;
+}
+
+/* Sidebar Header (Right Sidebar) */
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Close Button */
+.close-btn {
+    padding: 0.5rem;
+    background-color: #DC2626;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 1.5rem;
+    margin-left: 16rem; /* Account for fixed left sidebar */
+}
+
+@media (max-width: 1024px) {
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+/* Menu Button (Optional) */
+.menu-btn {
+    padding-left: 5rem;
+    padding: 0.5rem 1rem;
+    background-color: #1E40AF;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+/* Main Title */
+.main-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Main Text */
+.main-text {
+    margin-top: 0.5rem;
+}
+
+.sidebar-image {
+    background-image: url('.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px; /* Adjust to fit the image */
+    height: 50px; /* Adjust based on the image */
+    text-indent: -9999px; /* Hides the original text */
+    margin-bottom: 3rem;
+}
